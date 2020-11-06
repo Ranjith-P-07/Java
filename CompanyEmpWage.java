@@ -1,14 +1,24 @@
 public class CompanyEmpWage {
-   public final String Company;
-   public final int EmpratePerHr;
-   public final int numWorkingDays;
-   public final int max_hrs_in_month;
+        public final String company;
+        public final int empRatePerHour;
+        public final int numOfWorkingDays;
+        public final int maxHoursPerMonth;
+        public int totalEmpWage;
 
-   public CompanyEmpWage(String Company, int EmpratePerHr, int numWorkingDays, int max_hrs_in_month)
-   {
-      this.Company = Company;
-      this.EmpratePerHr = EmpratePerHr;
-      this.numWorkingDays = numWorkingDays;
-      this.max_hrs_in_month = max_hrs_in_month;
-   }
+        public CompanyEmpWage(String company, int empRatePerHour,
+                               int numOfWorkingDays, int maxHoursPerMonth){
+                this.company = company;
+                this.empRatePerHour = empRatePerHour;
+                this.numOfWorkingDays = numOfWorkingDays;
+                this.maxHoursPerMonth = maxHoursPerMonth;
+                totalEmpWage = 0;
+        }
+
+        public void setTotalEmpWage(int totalEmpWage) {
+                this.totalEmpWage = totalEmpWage;
+        }
+        public String toString() {
+                return "Total Emp Wage for Company: " +company+" is: "+ totalEmpWage;
+        }
 }
+
